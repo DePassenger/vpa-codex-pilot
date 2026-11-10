@@ -1,0 +1,21 @@
+{
+  "verify": [
+    "python tools/check_words.py"
+  ],
+  "skip": {
+    "coverage": "Это проверка текстов, а не приложение: отчёта покрытия нет.",
+    "security": "Зависимостей и серверного кода нет, сканировать нечего.",
+    "e2e": "Нет приложения, которое можно открыть в браузере.",
+    "mutation": "Нет кода для мутаций."
+  },
+  "protected": [
+    ".dark-factory.json",
+    ".dark-factory/**",
+    "tools/check_words.py",
+    ".github/workflows/**"
+  ],
+  "human_review_globs": [
+    ".github/**",
+    "tools/check_words.py"
+  ]
+}
